@@ -1,0 +1,15 @@
+{"level":"error","message":"Error: ReferenceError: x is not defined"}
+{"level":"error","message":"Error: ReferenceError: x is not defined"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'from')"}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required."}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required."}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required."}
+{"level":"error","message":"Error: ValidationError: mensaje: Path `mensaje` is required., fecha: Path `fecha` is required."}
