@@ -2,12 +2,22 @@ const fs = require('fs');
 const logger = require('../logs/logger');
 const Item = require('../models/Products.js');
 
-require('../db/connection.js'); 
+require('../db/connection.js');
+const { getProductsService, saveProductsService } = require('../services/products.js');
 
-// const fakerProducts = require('../utils/faker');
 const error = { error: 'Producto no encontrado' };
 
-module.exports = class Controller {
+const getProducts = async () => {
+    const products = await getProductsService();
+    return products;
+};
+
+const saveProducts = async (obj) => {
+    const products = await saveProductsService(obj);
+    return products;
+};
+
+class productsController {
     constructor(knex, table) {
         this.knex = knex;
         this.table = table;
@@ -112,3 +122,6 @@ module.exports = class Controller {
         }
       };
 }
+
+
+module.exports = { productsController, getProducts, saveProducts }

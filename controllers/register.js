@@ -1,24 +1,15 @@
-const User = require('../models/User'); 
-const bcrypt = require('bcrypt');
+const logger = require('../logs/logger');
+const { saveUserService } = require('../services/user');
 
-const save = async (user) => {
-  
-  const newUser = new User(user); 
+const saveUser = async (obj) => {
   try {
-    const userExist = await User.findOne({email: user.email});
-    if (userExist) { 
-      return false; 
-    } else { 
-      const hashPass = await bcrypt.hash(newUser.password, 10);
-      newUser.password = hashPass; 
-      await newUser.save();
-      return newUser; 
-    } 
-  } catch (error) {
-    console.log(error);
+    const user = await saveUserService(obj);
+    return user;
+  } catch (e) {
+    logger.error(`Error: ${err}`);
+    throw new Error('Ocurrió un error al guardar el usuario.', err);
   }
+};
 
-}
 
-
-module.exports = { save };
+module.exports = { saveUser };

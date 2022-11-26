@@ -95,3 +95,22 @@
 {"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
 {"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
 {"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/cart' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required., title: Path `title` is required."}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"error","message":"Error: ValidationError: text: Path `text` is required., date: Path `date` is required., email: Path `email` is required."}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}
+{"level":"warn","message":"Ruta '/favicon.ico' Inexistente - Método 'GET'"}

@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const register = Router();
-const {save} = require("../controllers/register");
+const {saveUser} = require("../controllers/register");
 
 register.get("/", (req, res) => {
     res.render('pages/register');
@@ -8,7 +8,7 @@ register.get("/", (req, res) => {
 
 register.post("/", (req, res) => {
   const {username, password, email} = req.body 
-  save({username, password, email}) 
+  saveUser({username, password, email}) 
     .then (user => {
       if (user) {
         return res.render('pages/succes')

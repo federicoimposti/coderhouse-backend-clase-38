@@ -1,15 +1,15 @@
 const express = require('express');
 const productsRouter = express.Router();
 
-const controller = require('../controllers/products');
+const { getProducts, saveProducts } = require('../controllers/products.js');
 
 productsRouter.get("/", async (req, res) => {
-  const response = await controller.getAll();
+  const response = await getProducts();
   res.render('pages/productForm', { products: response });
 });
 
 productsRouter.post("/", (req, res) => {
-  controller.save(req.body);
+  saveProducts(req.body);
   res.redirect("/");
 });
 

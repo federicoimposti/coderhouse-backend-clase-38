@@ -53,23 +53,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
-const messagesController = require('./controllers/messages');
-const productsController = require('./controllers/products');
+const { getProductsService, saveProductsService } = require('./services/products');
+const { getChatService, saveChatService } = require('./services/chat');
 
 io.on('connection', async function(socket) {
   console.log('Un cliente se ha conectado');
 
-  socket.emit('products', await productsController.getAll());
-  socket.emit('messages', await messagesController.getAll());
+  socket.emit('products', await getProductsService());
+  socket.emit('messages', await getChatService());
 
   socket.on('new-message', async (data) => {
-      await messagesController.save(data);
-      io.sockets.emit('messages', await messagesController.getAll());
+      await saveChatService(data);
+      io.sockets.emit('messages', await getChatService());
   });
 
   socket.on('new-product', async (data) => {
-      await productsController.save(data);
-      io.sockets.emit('products', await productsController.getAll());
+      await saveProductsService(data);
+      io.sockets.emit('products', await getProductsService());
   });
 });
 

@@ -1,9 +1,20 @@
 const logger = require("../logs/logger");
 const Message = require('../models/Messages.js');
+const { getChatService, saveChatService } = require("../services/chat");
 
-require('../db/connection.js'); 
+require('../db/connection.js');
 
-module.exports = class Messages {
+const getChat = async () => {
+    const chat = await getChatService();
+    return chat;
+};
+
+const saveChat = async (obj) => {
+    const chat = await saveChatService(obj);
+    return chat;
+};
+
+class Messages {
     constructor(knex, table) {
         this.knex = knex;
         this.table = table;
@@ -30,3 +41,5 @@ module.exports = class Messages {
         }
     }
 }
+
+module.exports = { Messages, getChat, saveChat }
